@@ -6,10 +6,19 @@ public class Chef implements Runnable  {
 	private Table table;
 	private Random r = new Random();
 	
+	/**
+	 * Initializes a new Chef
+	 * 
+	 * @param table Common table for the restaurant
+	 */
 	public Chef(Table table) {
 		this.table = table;
 	}
 	
+	/**
+	 * Chef makes burgers and adds them to table array, if table is full, he waits.
+	 * 
+	 */
 	@Override
 	public void run() {
 		
