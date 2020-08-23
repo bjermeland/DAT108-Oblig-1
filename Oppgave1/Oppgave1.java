@@ -10,7 +10,7 @@ public class Oppgave1 {
 	public static void main(String[] args)
 	  {
 		new Thread(() -> {
-	    	while(true&&!exit) {
+	    	while(!exit) {
 	    		msg = JOptionPane.showInputDialog(null,
 	    		        "Skriv inn din melding, quit for å slutte");
 	    	    if(msg.equals("quit")) exit = !exit ? true : false;
@@ -18,7 +18,7 @@ public class Oppgave1 {
 	    }).start();
 	    
 	    new Thread(() -> {
-	    	while(true&&!exit) {
+	    	while(!exit) {
 		    	try {
 					Thread.sleep(3000);
 					System.out.println(msg);
