@@ -16,7 +16,7 @@ public class Chef implements Runnable  {
 		try {
 			while (true) {
 
-				int randInt = r.nextInt(6-2) + 2;
+				int randInt = r.nextInt(5) + 2;
 				Thread.sleep(randInt * 1000);
 				
 				if (!table.isFull()) {
