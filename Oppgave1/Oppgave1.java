@@ -13,7 +13,7 @@ public class Oppgave1 {
 	    	while(!exit) {
 	    		msg = JOptionPane.showInputDialog(null,
 	    		        "Skriv inn din melding, quit for å slutte");
-	    	    if(msg.equals("quit")) exit = true;
+	    		exit = msg.equals("quit") ? true : false;
 	    	}
 	    }).start();
 	    
