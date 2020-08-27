@@ -31,7 +31,7 @@ public class Chef implements Runnable  {
 				if (!table.isFull()) {
 
 					synchronized(table) {
-						
+					 	
 						table.push();
 						
 						System.out.println(Thread.currentThread().getName()
@@ -42,9 +42,12 @@ public class Chef implements Runnable  {
 					
 				} else {
 					synchronized(table) {
+						
 						System.out.println("### " + Thread.currentThread().getName()
 								+ " er klar med en hamburger, men rutsjebanen er full. Venter! ###");
+						
 						table.wait();
+						
 					}
 				}
 			}

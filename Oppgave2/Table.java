@@ -72,8 +72,9 @@ public class Table {
 	public String toString() {
 		String str = "[";
 		for (int i = 0; i < table.size(); i++) {
-			str += "(" + (table.get(i) + 1) + ")";
+			str += "(" + (table.get(i) + 1) + "), ";
 		}
-		return str = str + "]";
+		str = str.replaceAll(", $", "");
+		return str += "]";
 	}
 }

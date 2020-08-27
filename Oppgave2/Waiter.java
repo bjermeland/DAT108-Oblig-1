@@ -1,8 +1,8 @@
 package no.hvl.dat108.Oppgave2;
-
 import java.util.Random;
 
 public class Waiter implements Runnable {
+	
 	private Table table;
 	private Random r = new Random();
 	
