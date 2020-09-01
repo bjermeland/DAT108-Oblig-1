@@ -21,10 +21,10 @@ public class Oppgave1 {
 	    	while(!exit) {
 		    	try {
 					Thread.sleep(3000);
-					System.out.println(msg);
 				} catch (InterruptedException e) {
 					System.out.println("Error occured while sleeping the Thread");
 				}
+				if(msg!=null) System.out.println(msg);
 	    	}
 	    }).start();
 	  }
